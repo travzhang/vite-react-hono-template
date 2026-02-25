@@ -1,9 +1,9 @@
-import { ConfigProvider, message, theme } from 'antd';
-import enUS from 'antd/es/locale/en_US';
-import jaJP from 'antd/es/locale/ja_JP';
-import zhCN from 'antd/es/locale/zh_CN';
-import { useRoutes } from 'react-router-dom';
-import routes from '~react-pages';
+import { ConfigProvider, message, theme } from "antd";
+import enUS from "antd/es/locale/en_US";
+import jaJP from "antd/es/locale/ja_JP";
+import zhCN from "antd/es/locale/zh_CN";
+import { useRoutes } from "react-router-dom";
+import routes from "~react-pages";
 
 const languages = {
   cn: zhCN,
@@ -11,7 +11,7 @@ const languages = {
   ja: jaJP,
 };
 
-const lng = (localStorage.getItem('language') || 'cn') as keyof typeof languages;
+const lng = (localStorage.getItem("language") || "cn") as keyof typeof languages;
 
 const { darkAlgorithm } = theme;
 
@@ -19,15 +19,14 @@ message.config({});
 
 const App = () => {
   const isDark =
-    localStorage.getItem('theme') === 'dark' ||
-    (!localStorage.getItem('theme') && false);
+    localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && false);
 
   return (
     <ConfigProvider
       locale={languages[lng]}
       theme={{
         token: {
-          colorPrimary: '#0071c2',
+          colorPrimary: "#0071c2",
         },
         algorithm: isDark ? [darkAlgorithm] : [],
       }}

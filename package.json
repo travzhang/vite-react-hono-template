@@ -1,7 +1,7 @@
 {
   "name": "vite-tem",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,10 @@
     "build:client": "vite build --mode client",
     "build:server": "vite build",
     "start": "node dist/index.js",
-    "test": "vitest run"
+    "test": "vitest run",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt"
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
@@ -50,6 +53,8 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
     "prisma": "^7.4.1",
     "tailwindcss": "^4.2.1",
     "typescript": "~5.9.3",

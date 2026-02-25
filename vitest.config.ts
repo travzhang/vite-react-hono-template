@@ -1,15 +1,13 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
     globals: true,
-    coverage:{
-      provider:'istanbul',
-      enabled:true,
-      reporter:['json','@canyonjs/report'],
-      include: [
-        'src/**',
-      ],
+    coverage: {
+      provider: "istanbul",
+      enabled: true,
+      reporter: ["json", "@canyonjs/report"],
+      include: ["src/**"],
     },
   },
 });
