@@ -155,11 +155,6 @@ postsApi.openapi(createRouteDef, async (c) => {
       title: body.title,
       content: body.content ?? "test",
       published: body.published ?? false,
-      author:{
-        connect:{
-          id: 1,
-        }
-      }
       // createdAt: new Date(),
       // updatedAt: new Date(),
     },

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --force",
+    "dev": "vite",
     "build": "vite build --mode client && vite build",
     "build:client": "vite build --mode client",
     "build:server": "vite build",
@@ -12,7 +12,10 @@
     "test": "vitest run",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "fmt": "oxfmt"
+    "fmt": "oxfmt",
+    "generate": "prisma generate",
+    "postinstall": "npm run generate",
+    "migrate:sql": "prisma migrate diff --from-empty --to-schema ./prisma/schema.prisma --script > ./schema.sql"
   },
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
