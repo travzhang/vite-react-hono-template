@@ -1,0 +1,12 @@
+-- DropForeignKey
+ALTER TABLE "Post" DROP CONSTRAINT "Post_authorId_fkey";
+
+-- AlterTable
+ALTER TABLE "Post" DROP COLUMN "authorId";
+
+-- AlterTable
+ALTER TABLE "Post" ADD COLUMN "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE "Post" ADD COLUMN "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+-- DropTable
+DROP TABLE "User";
